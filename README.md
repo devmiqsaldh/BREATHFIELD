@@ -1,4 +1,4 @@
-# BREATHFIELD (Nome provisório) - Anti estresse
+# BREATHFIELD - Anti estresse
 
 Aplicativo Playground desenvolvido com SwiftUI e SpritKit usando arquitetura MVVM.
 
