@@ -21,17 +21,17 @@ struct CalmIntroView: View {
     /// The view hierarchy for the intro screen.
     var body: some View {
         ZStack {
-            // Full-screen background image.
+            /// Full-screen background image.
             Image("background")
                 .resizable()
                 .ignoresSafeArea()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
-            // Renders the particle animation from the view model's scene.
+            /// Renders the particle animation from the view model's scene.
             SpriteKitView(scene: viewModel.scene)
                 .ignoresSafeArea()
             
-            // Centered motivational message.
+            /// Centered motivational message.
             Text("Empty your mind\nand let the calm flow")
                 .multilineTextAlignment(.center)
                 .font(.system(size: 26, weight: .bold, design: .serif))

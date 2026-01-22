@@ -21,13 +21,13 @@ struct CalmDetailsView: View {
     var body: some View {
         ZStack {
 
-            // Full-screen background image for visual context.
+            /// Full-screen background image for visual context.
             Image("background2")
                 .resizable()
                 .ignoresSafeArea()
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
 
-            // Title and subtitle copy.
+            /// Title and subtitle copy.
             VStack(spacing: 19) {
 
                 Text("Empty your mind\nand let the calm flow")
@@ -41,7 +41,7 @@ struct CalmDetailsView: View {
             .multilineTextAlignment(.center)
             .foregroundStyle(.black)
 
-            // Instructional tips about interacting with the field.
+            /// Instructional tips about interacting with the field.
             VStack(spacing: 16) {
                 Text("Touch the field, move it slowly, and\nobserve how it reacts")
 
@@ -54,7 +54,7 @@ struct CalmDetailsView: View {
             .foregroundStyle(.white)
             .cornerRadius(15)
 
-            // Call-to-action to start the interactive field.
+            /// Call-to-action to start the interactive field.
             VStack {
                 NavigationLink(value: "interactive") {
                     Text("Begin")

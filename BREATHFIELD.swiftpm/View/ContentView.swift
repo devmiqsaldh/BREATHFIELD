@@ -15,7 +15,7 @@ struct ContentView: View {
     /// Hosts the navigation and handles the cross-fade between intro and details.
     var body: some View {
         NavigationStack(path: $navigationPath) {
-            // Cross-fade between the intro and the details screen.
+            /// Cross-fade between the intro and the details screen.
             ZStack {
                 if showIntro {
                     CalmIntroView()

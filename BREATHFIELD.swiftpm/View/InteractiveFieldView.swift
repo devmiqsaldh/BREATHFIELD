@@ -23,7 +23,7 @@ struct InteractiveFieldView: View {
     /// Main layout: background, header, and the interactive SpriteKit field.
     var body: some View {
         ZStack {
-            // Full-screen background image.
+            /// Full-screen background image.
             Image("background")
                 .resizable()
                 .ignoresSafeArea()
@@ -32,7 +32,7 @@ struct InteractiveFieldView: View {
             VStack {
                 header
                 
-                // Card container for the field with rounded corners and gesture handling.
+                /// Card container for the field with rounded corners and gesture handling.
                 ZStack {
                     RoundedRectangle(cornerRadius: 28)
                         .fill(Color.black)
@@ -40,7 +40,7 @@ struct InteractiveFieldView: View {
                     
                     SpriteKitView(scene: viewModel.scene)
                         .clipShape(RoundedRectangle(cornerRadius: 28))
-                        // Forward drag gestures to the view model to drive the simulation.
+                        /// Forward drag gestures to the view model to drive the simulation.
                         .gesture(
                             DragGesture(minimumDistance: 0)
                                 .onChanged { value in
@@ -63,7 +63,7 @@ struct InteractiveFieldView: View {
                 .padding(.horizontal)
             }
             
-            // Present completion/stability overlay when the field reaches stability.
+            /// Present completion/stability overlay when the field reaches stability.
             if viewModel.showStableInfo {
                 StableFieldView {
                     presentationMode.wrappedValue.dismiss()
@@ -80,7 +80,7 @@ struct InteractiveFieldView: View {
     /// Header showing the title and the current field state.
     private var header: some View {
         VStack(spacing: 0) {
-            // Title and section label.
+            /// Title and section label.
             HStack(spacing:5){
                 
                 
@@ -95,7 +95,7 @@ struct InteractiveFieldView: View {
                     .foregroundStyle(.black)
                     .font(.system(size: 17, weight: .semibold, design: .serif))
             }
-            // Current state description styled by its representative color.
+            /// Current state description styled by its representative color.
             HStack(spacing: 0){
                 Spacer()
                 Text(viewModel.state.description)

@@ -18,12 +18,12 @@ struct SpriteKitView: UIViewRepresentable {
     func makeUIView(context: Context) -> SKView {
         let view = SKView()
 
-        // Enable transparency so the scene can overlay SwiftUI content.
+        /// Enable transparency so the scene can overlay SwiftUI content.
         view.isOpaque = false
         view.backgroundColor = .clear
         view.allowsTransparency = true
 
-        // Match the scene size to the device screen; adjust as needed for layout.
+        /// Match the scene size to the device screen; adjust as needed for layout.
         scene.size = UIScreen.main.bounds.size  
         view.presentScene(scene)
 
